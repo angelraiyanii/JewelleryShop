@@ -7,9 +7,11 @@ import {
   FaUserPlus,
   FaUser,
   FaSignOutAlt,
+  FaHeart, FaShoppingCart, FaHistory
 } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -92,55 +94,56 @@ const Navbar = () => {
             </li>
           </ul>
 
-          {/* User Icon with Dropdown */}
-          <div className="dropdown position-relative">
-            <button
-              className="btn text-white fs-4 dropdown-toggle"
-              type="button"
-              id="userDropdown"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <FaUserCircle />
-            </button>
-            <ul
-              className="dropdown-menu dropdown-menu-end"
-              aria-labelledby="userDropdown"
-            >
-              <li>
-                <Link
-                  className="dropdown-item d-flex align-items-center"
-                  to="/Login"
-                >
-                  <FaSignInAlt className="me-2" /> Login
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="dropdown-item d-flex align-items-center"
-                  to="/Registor"
-                >
-                  <FaUserPlus className="me-2" /> Signup
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="dropdown-item d-flex align-items-center"
-                  to="/Account"
-                >
-                  <FaUser className="me-2" /> Account
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="dropdown-item text-danger d-flex align-items-center"
-                  to="/logout"
-                >
-                  <FaSignOutAlt className="me-2" /> Logout
-                </Link>
-              </li>
-            </ul>
-          </div>
+         {/* User Icon with Dropdown */}
+<div className="dropdown position-relative">
+  <button
+    className="btn text-white fs-4 dropdown-toggle"
+    type="button"
+    id="userDropdown"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+  >
+    <FaUserCircle />
+  </button>
+  <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+    <li>
+      <Link className="dropdown-item d-flex align-items-center" to="/Login">
+        <FaSignInAlt className="me-2 text-primary" /> Login
+      </Link>
+    </li>
+    <li>
+      <Link className="dropdown-item d-flex align-items-center" to="/Registor">
+        <FaUserPlus className="me-2 text-success" /> Signup
+      </Link>
+    </li>
+    <li>
+      <Link className="dropdown-item d-flex align-items-center" to="/Account">
+        <FaUser className="me-2 text-info" /> Account
+      </Link>
+    </li>
+    <li>
+      <Link className="dropdown-item d-flex align-items-center" to="/Wishlist">
+        <FaHeart className="me-2 text-danger" /> Wishlist
+      </Link>
+    </li>
+    <li>
+      <Link className="dropdown-item d-flex align-items-center" to="/Cart">
+        <FaShoppingCart className="me-2 text-primary" /> Cart
+      </Link>
+    </li>
+    <li>
+      <Link className="dropdown-item d-flex align-items-center" to="/OrderHistory">
+        <FaHistory className="me-2 text-warning" /> Order History
+      </Link>
+    </li>
+    <li>
+      <Link className="dropdown-item text-danger d-flex align-items-center" to="/logout">
+        <FaSignOutAlt className="me-2" /> Logout
+      </Link>
+    </li>
+  </ul>
+</div>
+
         </div>
       </div>
     </nav>

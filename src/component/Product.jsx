@@ -38,6 +38,7 @@ export class Product extends Component {
                   className={`like-icon ${this.state.liked[0] ? "liked" : ""}`}
                   onClick={() => this.toggleLike(0)}
                 />
+                
                 <FaInfoCircle className="info-icon" />
                 <h4>Gold Ring</h4>
                 <p>$120</p>
