@@ -4,32 +4,32 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import bg from "./Images/bg.png";
 import { Link } from "react-router-dom";
 
-const ForgotPassword = () => {
-  const [email, setEmail] = useState("");
+const OTPVerification = () => {
+  const [otp, setOtp] = useState("");
   const [errors, setErrors] = useState("");
   const [message, setMessage] = useState("");
 
   const handleChange = (e) => {
-    setEmail(e.target.value);
+    setOtp(e.target.value);
   };
 
-  const validateEmail = (email) => {
-    if (!email) {
-      return "Email is required.";
-    } else if (!/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
-      return "Invalid email format.";
+  const validateOtp = (otp) => {
+    if (!otp) {
+      return "OTP is required.";
+    } else if (!/^[0-9]{6}$/.test(otp)) {
+      return "Invalid OTP format. Must be 6 digits.";
     }
     return "";
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const error = validateEmail(email);
+    const error = validateOtp(otp);
     setErrors(error);
 
     if (!error) {
-      setMessage("Password reset link has been sent to your email.");
-      setEmail("");
+      setMessage("OTP verified successfully!");
+      setOtp("");
       setErrors("");
     }
   };
@@ -48,36 +48,34 @@ const ForgotPassword = () => {
         className="card shadow-lg p-4"
         style={{ width: "350px", background: "rgba(197, 180, 143, 0.9)" }}
       >
-        <h3 className="text-center mb-4">Forgot Password</h3>
+        <h3 className="text-center mb-4">OTP Verification</h3>
         <form onSubmit={handleSubmit}>
-          {/* Email */}
+          {/* OTP Input */}
           <div className="mb-3">
-            <label htmlFor="email" className="form-label fw-bold">
-              Enter your email
+            <label htmlFor="otp" className="form-label fw-bold">
+              Enter OTP
             </label>
             <input
-              type="email"
-              id="email"
-              name="email"
+              type="text"
+              id="otp"
+              name="otp"
               className={`form-control form-control-sm ${errors ? "is-invalid" : ""}`}
-              value={email}
+              value={otp}
               onChange={handleChange}
-              placeholder="Enter your email"
+              placeholder="Enter 6-digit OTP"
+              maxLength="6"
             />
             {errors && <div className="invalid-feedback">{errors}</div>}
           </div>
           {/* Message */}
           {message && <p className="text-success text-center">{message}</p>}
           {/* Submit Button */}
-         
           <button type="submit" className="btn btn-primary w-50 d-block mx-auto">
-            Send Otp
-          </button> <Link to="/OTPVerification">
-          otp Form
-          </Link>
-          {/* Back to Login */}
+            Verify OTP
+          </button>
+          {/* Resend OTP */}
           <p className="text-center mt-3">
-            Remembered your password? <Link to="/login" className="text-danger">Login</Link>
+            Didn't receive an OTP? <a href="#" className="text-danger">Resend OTP</a>
           </p>
         </form>
       </div>
@@ -85,4 +83,4 @@ const ForgotPassword = () => {
   );
 };
 
-export default ForgotPassword;
+export default OTPVerification;

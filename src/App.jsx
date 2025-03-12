@@ -14,6 +14,7 @@ import Contactas from "./component/Contactas";
 import Cart from "./component/Cart";
 import Wishlist from "./component/Wishlist";
 import ForgotPassword from "./component/ForgotPassword";
+import OTPVerification from "./component/OTPVerification";
 function App() {
   return (
     <Router>
@@ -40,6 +41,7 @@ function App() {
         <Route path="/Cart" element={<Cart />} />
         <Route path="/Wishlist" element={<Wishlist />} />
         <Route path="/ForgotPassword" element={<ForgotPassword />} />
+        <Route path="/OTPVerification" element={<OTPVerification />} />
       </Routes>
       <Footer />
     </Router>

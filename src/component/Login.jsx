@@ -126,7 +126,7 @@ const Login = () => {
           {/* Register Now */}
           <p className="text-center mt-3">
             Don't have an account?{" "}
-            <Link>
+            <Link to="/Registor">
               <a className="text-danger">Register Now</a>
             </Link>
           </p>
