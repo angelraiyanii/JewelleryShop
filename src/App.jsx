@@ -12,8 +12,8 @@ import SiglePro from "./component/SiglePro";
 import Aboutas from "./component/Aboutas";
 import Contactas from "./component/Contactas";
 import Cart from "./component/Cart";
-import Wishlist from "./component/Wishlist";  
-
+import Wishlist from "./component/Wishlist";
+import ForgotPassword from "./component/ForgotPassword";
 function App() {
   return (
     <Router>
@@ -36,10 +36,10 @@ function App() {
         <Route path="/Account" element={<Account />} />
         <Route path="/SiglePro" element={<SiglePro />} />
         <Route path="/Aboutas" element={<Aboutas />} />
-        <Route path="/Contactas" element={<Contactas/>}/>
-        <Route path="/Cart" element={<Cart/>}/>
-        <Route path="/Wishlist" element={<Wishlist/>}/>
-        
+        <Route path="/Contactas" element={<Contactas />} />
+        <Route path="/Cart" element={<Cart />} />
+        <Route path="/Wishlist" element={<Wishlist />} />
+        <Route path="/ForgotPassword" element={<ForgotPassword />} />
       </Routes>
       <Footer />
     </Router>

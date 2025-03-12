@@ -6,6 +6,8 @@ import pro4 from "./images/pro4.png";
 import { FaHeart } from "react-icons/fa"; // Import Heart Icon
 import { FaInfoCircle } from "react-icons/fa"; // Import Info Icon
 import "../App.css";
+import { Link } from "react-router-dom";
+
 
 export class Product extends Component {
   constructor() {
@@ -38,8 +40,8 @@ export class Product extends Component {
                   className={`like-icon ${this.state.liked[0] ? "liked" : ""}`}
                   onClick={() => this.toggleLike(0)}
                 />
-                
-                <FaInfoCircle className="info-icon" />
+                <Link to="/SiglePro">
+                <FaInfoCircle className="info-icon" /></Link>
                 <h4>Gold Ring</h4>
                 <p>$120</p>
                 <button className="btn btn-primary">Add to Cart</button>
@@ -55,8 +57,8 @@ export class Product extends Component {
                 <FaHeart
                   className={`like-icon ${this.state.liked[1] ? "liked" : ""}`}
                   onClick={() => this.toggleLike(1)}
-                />
-                <FaInfoCircle className="info-icon" />
+                /> <Link to="/SiglePro">
+                <FaInfoCircle className="info-icon" /></Link>
                 <h4>Silver Bracelet</h4>
                 <p>$90</p>
                 <button
@@ -79,8 +81,8 @@ export class Product extends Component {
                 <FaHeart
                   className={`like-icon ${this.state.liked[2] ? "liked" : ""}`}
                   onClick={() => this.toggleLike(2)}
-                />
-                <FaInfoCircle className="info-icon" />
+                /> <Link to="/SiglePro">
+                <FaInfoCircle className="info-icon" /></Link>
                 <h4>Diamond Earrings</h4>
                 <p>$200</p>
                 <button className="btn btn-primary">Add to Cart</button>
@@ -100,8 +102,8 @@ export class Product extends Component {
                 <FaHeart
                   className={`like-icon ${this.state.liked[3] ? "liked" : ""}`}
                   onClick={() => this.toggleLike(3)}
-                />
-                <FaInfoCircle className="info-icon" />
+                /> <Link to="/SiglePro">
+                <FaInfoCircle className="info-icon" /></Link>
                 <h4>Platinum Necklace</h4>
                 <p>$350</p>
                 <button className="btn btn-primary">Add to Cart</button>

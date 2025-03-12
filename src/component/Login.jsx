@@ -2,7 +2,7 @@ import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import bg from "./Images/bg.png";
-
+import { Link } from "react-router-dom";
 const Login = () => {
   const [formData, setFormData] = useState({
     email: "",
@@ -110,7 +110,12 @@ const Login = () => {
               <div className="invalid-feedback">{errors.password}</div>
             )}
           </div>
-
+          {/* Forgot Password */}
+          <p className="text-center mt-3">
+            <Link to="/ForgotPassword">
+              <a>Forgot Password?</a>
+            </Link>
+          </p>
           {/* Submit Button */}
           <button
             type="submit"
@@ -118,6 +123,13 @@ const Login = () => {
           >
             Submit
           </button>
+          {/* Register Now */}
+          <p className="text-center mt-3">
+            Don't have an account?{" "}
+            <Link>
+              <a className="text-danger">Register Now</a>
+            </Link>
+          </p>
         </form>
       </div>
     </div>
