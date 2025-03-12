@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./component/Navbar";
 import Slider from "./component/Slider";
@@ -30,7 +29,6 @@ function App() {
             </>
           }
         />
-        <Route path="/Category" element={<Category />} />
         <Route path="/Product" element={<Product />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Registor" element={<Registor />} />
