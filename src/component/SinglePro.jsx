@@ -4,7 +4,7 @@ import { Component } from "react";
 import pro1 from "./images/pro2.png";
 import { Link } from "react-router-dom";
 
-export class SiglePro extends Component {
+export class SinglePro extends Component {
   render() {
     return (
       <div className="container mt-5">
@@ -19,7 +19,6 @@ export class SiglePro extends Component {
             />
           </div>
           <div className="col-md-8">
-           
             <div className="mt-5">
               <div className="product-details text-start">
                 <h3>ProductName</h3>
@@ -121,7 +120,6 @@ export class SiglePro extends Component {
                       type="number"
                       id="quantity"
                       name="quantity"
-                      
                       className="form-control w-25"
                     />
                   </div>
@@ -148,4 +146,4 @@ export class SiglePro extends Component {
   }
 }
 
-export default SiglePro;
+export default SinglePro;

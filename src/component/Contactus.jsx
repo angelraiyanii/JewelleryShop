@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import contactas from "./images/contactas.png";
-import contactimg from "./images/bracelet.png"; 
+import contactimg from "./images/bracelet.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPhone,
@@ -11,7 +11,7 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
 
-class Contactas extends Component {
+class Contactus extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -94,7 +94,7 @@ class Contactas extends Component {
                 <div className="jewellery-info p-4">
                   <img
                     src={contactimg}
-                    height={350} 
+                    height={350}
                     alt="Beautiful Jewellery"
                     width={350}
                     className="img-fluid rounded shadow"
@@ -181,4 +181,4 @@ class Contactas extends Component {
   }
 }
 
-export default Contactas;
+export default Contactus;

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import c1 from "../images/proaddimg1.png";
+import c1 from "../images/Category1.png";
 export class AdPro extends Component {
   constructor(props) {
     super(props);
@@ -125,50 +125,47 @@ export class AdPro extends Component {
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
               height: "200px",
+              width: "100%",
             }}
           >
-            <section className="cart-section">
-              <div className="col-md-4 d-flex justify-content justify-content-md-star">
-                <h2 className="text-light text-md-left">Product View</h2>
-              </div>
+            <div className="col-md-4 d-flex justify-content justify-content-md-star">
+              <h2 className="text-light text-md-left">Product View</h2>
+            </div>
 
-              {/* Search form */}
-              <div className="col-12 col-md-4 d-flex justify-content-center mb-2 mb-md-0">
-                <form method="GET" action="" className="d-flex w-100">
-                  <div className="input-group w-100">
-                    <input
-                      type="text"
-                      name="search"
-                      className="form-control"
-                      placeholder="Search here"
-                      value={this.state.search || ""}
-                      onChange={(e) =>
-                        this.setState({ search: e.target.value })
-                      }
-                    />
-                    <div className="input-group-append">
-                      <button
-                        className="btn btn-dark w-10 p-3 ms-2"
-                        type="submit"
-                      >
-                        Search
-                      </button>
-                    </div>
+            {/* Search form */}
+            <div className="col-12 col-md-4 d-flex justify-content-center mb-2 mb-md-0">
+              <form method="GET" action="" className="d-flex w-100">
+                <div className="input-group w-100">
+                  <input
+                    type="text"
+                    name="search"
+                    className="form-control"
+                    placeholder="Search here"
+                    value={this.state.search || ""}
+                    onChange={(e) => this.setState({ search: e.target.value })}
+                  />
+                  <div className="input-group-append">
+                    <button
+                      className="btn btn-dark w-10 p-3 ms-2"
+                      type="submit"
+                    >
+                      Search
+                    </button>
                   </div>
-                </form>
-              </div>
+                </div>
+              </form>
+            </div>
 
-              {/* Add Category Button */}
-              <div className="col-12 col-md-4 d-flex justify-content-center justify-content-md-end">
-                <button
-                  id="toggleFormBtnI"
-                  className="btn btn-success w-30 fs-5"
-                  onClick={this.ShowProductForm} //this function name
-                >
-                  Add Product
-                </button>
-              </div>
-            </section>
+            {/* Add Category Button */}
+            <div className="col-12 col-md-4 d-flex justify-content-center justify-content-md-end">
+              <button
+                id="toggleFormBtnI"
+                className="btn btn-success w-30 fs-5"
+                onClick={this.ShowProductForm} //this function name
+              >
+                Add Product
+              </button>
+            </div>
           </div>
         </div>
         {/* Product View Start*/}

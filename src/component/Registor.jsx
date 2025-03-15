@@ -2,6 +2,8 @@ import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import bg from "./Images/bg.png";
+import { Link } from "react-router-dom";
+
 const Registor = () => {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -254,6 +256,10 @@ const Registor = () => {
           <button type="submit" className="btn btn-primary w-50">
             Register
           </button>
+          {/* Login Link */}
+          <p className="mt-3 text-center">
+            Already have an account? <Link to="/login">Login</Link>
+          </p>
         </form>
       </div>
     </div>

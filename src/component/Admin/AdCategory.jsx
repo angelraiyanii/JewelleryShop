@@ -1,8 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import React, { Component } from "react";
-import c1 from "../images/C1.jpg";
-import cc1 from "../images/proaddimg1.png";
+import c1 from "../images/category1.png";
+import cc1 from "../images/category2.png";
 export class AddCategory extends Component {
   constructor(props) {
     super(props);

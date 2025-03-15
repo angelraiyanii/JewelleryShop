@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import u1 from "../images/user1.png";
-import c1 from "../images/proaddimg1.png";
+import c1 from "../images/pro1.png";
 export class AdUser extends Component {
   constructor(props) {
     super(props);

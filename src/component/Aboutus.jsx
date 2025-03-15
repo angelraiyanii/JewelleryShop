@@ -6,7 +6,7 @@ import img1 from "./images/category1.png";
 import img2 from "./images/category2.png";
 import "../App.css";
 
-export class Aboutas extends Component {
+export class Aboutus extends Component {
   render() {
     return (
       <div className="about-container">
@@ -26,7 +26,9 @@ export class Aboutas extends Component {
             <div className="col-md-6 text-center mb-4 mb-md-0">
               <img
                 src={img1}
+                height={300}
                 alt="Jewellery"
+                width={300}
                 className="img-fluid rounded about-img"
               />
             </div>
@@ -59,7 +61,9 @@ export class Aboutas extends Component {
             <div className="col-lg-6 text-center">
               <img
                 src={img2}
+                height={300}
                 alt="Jewellery"
+                width={300}
                 className="img-fluid rounded about-img"
               />
             </div>
@@ -71,7 +75,7 @@ export class Aboutas extends Component {
         {/* About manager - Responsive Cards */}
         <div className="container">
           <div className="row">
-              {/* First Card */}
+            {/* First Card */}
             <div className="col-md-3 col-sm-12 mb-8">
               <div className="card news-card">
                 <img
@@ -97,7 +101,7 @@ export class Aboutas extends Component {
               </div>
             </div>
 
-              {/* Second Card */}
+            {/* Second Card */}
             <div className="col-md-3 col-sm-12 mb-8">
               <div className="card news-card">
                 <img
@@ -124,7 +128,6 @@ export class Aboutas extends Component {
             </div>
             {/* Third Card */}
             <div className="col-md-3 col-sm-12 mb-8">
-          
               <div className="card news-card">
                 <img
                   src={a1}
@@ -148,8 +151,8 @@ export class Aboutas extends Component {
                 </div>
               </div>
             </div>
-              {/* 4 Card */}
-              <div className="col-md-3 col-sm-12 mb-8">
+            {/* 4 Card */}
+            <div className="col-md-3 col-sm-12 mb-8">
               <div className="card news-card">
                 <img
                   src={a1}
@@ -180,4 +183,4 @@ export class Aboutas extends Component {
   }
 }
 
-export default Aboutas;
+export default Aboutus;

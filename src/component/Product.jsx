@@ -40,7 +40,7 @@ export class Product extends Component {
                   className={`like-icon ${this.state.liked[0] ? "liked" : ""}`}
                   onClick={() => this.toggleLike(0)}
                 />
-                <Link to="/SiglePro">
+                <Link to="/SinglePro">
                 <FaInfoCircle className="info-icon" /></Link>
                 <h4>Gold Ring</h4>
                 <p>$120</p>
@@ -57,7 +57,7 @@ export class Product extends Component {
                 <FaHeart
                   className={`like-icon ${this.state.liked[1] ? "liked" : ""}`}
                   onClick={() => this.toggleLike(1)}
-                /> <Link to="/SiglePro">
+                /> <Link to="/SinglePro">
                 <FaInfoCircle className="info-icon" /></Link>
                 <h4>Silver Bracelet</h4>
                 <p>$90</p>
@@ -81,7 +81,7 @@ export class Product extends Component {
                 <FaHeart
                   className={`like-icon ${this.state.liked[2] ? "liked" : ""}`}
                   onClick={() => this.toggleLike(2)}
-                /> <Link to="/SiglePro">
+                /> <Link to="/SinglePro">
                 <FaInfoCircle className="info-icon" /></Link>
                 <h4>Diamond Earrings</h4>
                 <p>$200</p>
@@ -102,7 +102,7 @@ export class Product extends Component {
                 <FaHeart
                   className={`like-icon ${this.state.liked[3] ? "liked" : ""}`}
                   onClick={() => this.toggleLike(3)}
-                /> <Link to="/SiglePro">
+                /> <Link to="/SinglePro">
                 <FaInfoCircle className="info-icon" /></Link>
                 <h4>Platinum Necklace</h4>
                 <p>$350</p>
