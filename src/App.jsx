@@ -20,6 +20,8 @@ import AdPro from "./component/Admin/AdPro";
 import SinglePro from "./component/SinglePro";
 import AdUser from "./component/Admin/AdUser";
 import Rating_Review from "./component/Rating_Review";
+import CheckOut from "./component/CheckOut";
+import Offer from "./component/Offer";
 function App() {
   return (
     <Router>
@@ -53,6 +55,8 @@ function App() {
         <Route path="/Admin/AdPro" element={<AdPro />} />
         <Route path="/SinglePro" element={<SinglePro />} />
         <Route path="/Admin/AdUser" element={<AdUser />} />
+        <Route path="/CheckOut" element={<CheckOut />} />
+        <Route path="/Offer" element={<Offer />} />
       </Routes>
       <Footer />
     </Router>
