@@ -67,7 +67,7 @@ const Footer = () => {
               <FaMapMarkerAlt className="me-2" /> 456 Luxury Lane, New York, USA
             </p>
             <p>
-              <FaPhoneAlt className="me-2" /> +1 987 654 3210
+              <FaPhoneAlt className="me-2" /> +91 2223344567
             </p>
             <p>
               <FaEnvelope className="me-2" /> support@jewelshop.com
