@@ -1,8 +1,8 @@
 import React from "react";
 import c5 from "./Images/category.png"; // Sample product image
 import Offer from "./Offer";
-
-const Cart = () => {
+class Cart extends Component {
+Render()  {
   return (
     <div className="container">
       <div className="row align-items shadow rounded">
@@ -79,5 +79,5 @@ const Cart = () => {
     </div>
   );
 };
-
+};
 export default Cart;
