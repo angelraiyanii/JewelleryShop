@@ -29,6 +29,7 @@ const Category = () => {
           </div>
         ))}
       </div>
+      <button>Show More</button>
     </>
   );
 };

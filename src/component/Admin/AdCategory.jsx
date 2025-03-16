@@ -87,54 +87,23 @@ export class AddCategory extends Component {
     return (
       <center>
         <div className="container ">
-                <div
-                  className="row align-items-center shadow rounded"
-                  style={{
-                    backgroundImage: `url(${cc1})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
-                    height: "200px",
-                  }}
-                >
-            <div className="col-12 col-md-4 d-flex justify-content-center justify-content-md-start mb-2 mb-md-0">
-              <h2 className="text-light text-md-left"> Category View</h2>
+          <h2 className="text-center mb-4">Category</h2>
+          <div className="d-flex justify-content-between mb-3">
+            <div className="d-flex">
+              <input
+                type="text"
+                className="form-control me-2"
+                placeholder="Search offers..."
+              />
+              <button className="btn btn-primary">Search</button>
             </div>
-
-            {/* Search form */}
-            <div className="col-12 col-md-4 d-flex justify-content-center mb-2 mb-md-0">
-              <form method="GET" action="" className="d-flex w-100">
-                <div className="input-group w-100">
-                  <input
-                    type="text"
-                    name="search"
-                    className="form-control"
-                    placeholder="Search here"
-                    value={this.state.search || ""}
-                    onChange={(e) => this.setState({ search: e.target.value })}
-                  />
-                  <div className="input-group-append">
-                    <button
-                      className="btn btn-dark w-10 p-3 ms-2"
-                      type="submit"
-                    >
-                      Search
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-
-            {/* Add Category Button */}
-            <div className="col-12 col-md-4 d-flex justify-content-center justify-content-md-end">
-              <button
-                id="toggleFormBtnI"
-                className="btn btn-success w-30 fs-5"
-                onClick={this.ShowCategoryForm}
-              >
-                Add Category
-              </button>
-            </div>
+            <button
+              id="toggleFormBtnI"
+              className="btn btn-success"
+              onClick={this.ShowCategoryForm}
+            >
+              Add Category
+            </button>
           </div>
         </div>
         {/* Category View */}
@@ -148,13 +117,13 @@ export class AddCategory extends Component {
                       <th>Sr No</th>
                       <th>Category Image</th>
                       <th>Category Name</th>
-                      <th>Gender</th>
+                      {/* <th>Gender</th> */}
                       <th>Status</th>
                       <th>Update</th>
                       <th>Delete</th>
                     </tr>
                   </thead>
-                  <tbody className="fs-4">
+                  <tbody>
                     <tr>
                       <td>1</td>
                       <td>
@@ -165,7 +134,7 @@ export class AddCategory extends Component {
                         />
                       </td>
                       <td>Gold</td>
-                      <td>Male</td>
+                      {/* <td>Male</td> */}
                       <td className="text-success fw-bold">Active</td>
 
                       <td>
@@ -206,9 +175,7 @@ export class AddCategory extends Component {
                       </h1>
                       <form onSubmit={this.handleSubmit}>
                         <div className="mb-3">
-                          <label className="form-label p-2 fs-5">
-                            Category Name
-                          </label>
+                          <label className="form-label">Category Name</label>
                           <input
                             type="text"
                             name="categoryName"
@@ -222,8 +189,8 @@ export class AddCategory extends Component {
                           </div>
                         </div>
 
-                        <div className="mb-3">
-                          <label className="form-label p-2 fs-5">Gender</label>
+                        {/* <div className="mb-3">
+                          <label className="form-label">Gender</label>
                           <div>
                             <label className="me-3">
                               <input
@@ -247,12 +214,10 @@ export class AddCategory extends Component {
                           <div className="text-danger">
                             {this.state.errors.categoryGender}
                           </div>
-                        </div>
+                        </div> */}
 
                         <div className="mb-3">
-                          <label className="form-label fs-5">
-                            Category Image
-                          </label>
+                          <label className="form-label">Category Image</label>
                           <input
                             type="file"
                             accept="image/png, image/jpeg, image/jpg"
@@ -286,9 +251,7 @@ export class AddCategory extends Component {
                         </div>
 
                         <div className="mb-3">
-                          <label className="form-label fs-5">
-                            Category Status
-                          </label>
+                          <label className="form-label">Category Status</label>
                           <div>
                             <label className="me-3">
                               <input
@@ -314,7 +277,7 @@ export class AddCategory extends Component {
                           </div>
                         </div>
 
-                        <div className="text-center py-3">
+                        <div className="text-center">
                           <button
                             type="submit"
                             className="btn btn-primary btn-lg"
@@ -347,9 +310,7 @@ export class AddCategory extends Component {
                       </h1>
                       <form onSubmit={this.handleSubmit}>
                         <div className="mb-3">
-                          <label className="form-label p-2 fs-5">
-                            Category Name
-                          </label>
+                          <label className="form-label">Category Name</label>
                           <input
                             type="text"
                             name="categoryName"
@@ -363,7 +324,7 @@ export class AddCategory extends Component {
                           </div>
                         </div>
 
-                        <div className="mb-3">
+                        {/* <div className="mb-3">
                           <label className="form-label p-2 fs-5">Gender</label>
                           <div>
                             <label className="me-3">
@@ -388,12 +349,10 @@ export class AddCategory extends Component {
                           <div className="text-danger">
                             {this.state.errors.categoryGender}
                           </div>
-                        </div>
+                        </div> */}
 
                         <div className="mb-3">
-                          <label className="form-label fs-5">
-                            Category Image
-                          </label>
+                          <label className="form-label">Category Image</label>
                           <input
                             type="file"
                             accept="image/png, image/jpeg, image/jpg"
@@ -427,9 +386,7 @@ export class AddCategory extends Component {
                         </div>
 
                         <div className="mb-3">
-                          <label className="form-label fs-5">
-                            Category Status
-                          </label>
+                          <label className="form-label">Category Status</label>
                           <div>
                             <label className="me-3">
                               <input

@@ -13,6 +13,7 @@ import ForgotPassword from "./component/ForgotPassword";
 import OTPVerification from "./component/OTPVerification";
 import Account from "./component/Account";
 import Cart from "./component/Cart";
+import Checkout from "./component/Checkout";
 import Wishlist from "./component/Wishlist";
 import OrderHistory from "./component/OrderHistory";
 import AdCategory from "./component/Admin/AdCategory";
@@ -20,6 +21,12 @@ import AdPro from "./component/Admin/AdPro";
 import SinglePro from "./component/SinglePro";
 import AdUser from "./component/Admin/AdUser";
 import Rating_Review from "./component/Rating_Review";
+import AdOrder from "./component/Admin/AdOrder";
+import AdOffers from "./component/Admin/AdOffers";
+import AdContact from "./component/Admin/AdContact";
+import AdAbout from "./component/Admin/AdAbout";
+import AdReviews from "./component/Admin/AdReviews";
+import AdBanner from "./component/Admin/AdBanner";
 function App() {
   return (
     <Router>
@@ -33,7 +40,8 @@ function App() {
               <Slider />
               <Category />
               <Product />
-              <Rating_Review/>
+              <Slider />
+              <Product />
             </>
           }
         />
@@ -45,15 +53,22 @@ function App() {
         <Route path="/Registor" element={<Registor />} />
         <Route path="/Account" element={<Account />} />
         <Route path="/Cart" element={<Cart />} />
+        <Route path="/Checkout" element={<Checkout/>}/>
         <Route path="/Wishlist" element={<Wishlist />} />
         <Route path="/OrderHistory" element={<OrderHistory />} />
         <Route path="/ForgotPassword" element={<ForgotPassword />} />
         <Route path="/OTPVerification" element={<OTPVerification />} />
         <Route path="/Rating_Review" element={<Rating_Review />} />
+        <Route path="/SinglePro" element={<SinglePro/>}/>
         <Route path="/Admin/AdCategory" element={<AdCategory/>}/>
         <Route path="/Admin/AdPro" element={<AdPro/>}/>
-        <Route path="/SinglePro" element={<SinglePro/>}/>
         <Route path="/Admin/AdUser" element={<AdUser/>}/>
+        <Route path="/Admin/AdOrder" element={<AdOrder/>}/>
+        <Route path="/Admin/AdOffers" element={<AdOffers/>}/>
+        <Route path="/Admin/AdContact" element={<AdContact/>}/>
+        <Route path="/Admin/AdAbout" element={<AdAbout/>}/>
+        <Route path="/Admin/AdReviews" element={<AdReviews/>}/>
+        <Route path="/Admin/AdBanner" element={<AdBanner/>}/>
       </Routes>
       <Footer />
     </Router>

@@ -18,7 +18,7 @@ export class AdUser extends Component {
       },
       userFormShow: false,
       showUserView: false,
-      userUpdateFormShow:false,
+      userUpdateFormShow: false,
       errors: {}, // To store validation errors
       imagePreview: null, // To store image preview URL
     };
@@ -86,67 +86,36 @@ export class AdUser extends Component {
     this.setState({ showUserView: true });
     this.setState({ userUpdateFormShow: false });
   };
-  ShowUpdateFormUser=()=>{
+  ShowUpdateFormUser = () => {
     this.setState({ userFormShow: false });
     this.setState({ showUserView: false });
     this.setState({ userUpdateFormShow: true });
-  }
+  };
   render() {
     const { formData, errors, imagePreview } = this.state;
 
     return (
       <center>
-         <div className="container ">
-                 <div
-                   className="row align-items-center shadow rounded"
-                   style={{
-                     backgroundImage: `url(${c1})`,
-                     backgroundSize: "cover",
-                     backgroundPosition: "center",
-                     backgroundRepeat: "no-repeat",
-                     height: "200px",
-                   }}
-                 >
-            <div className="col-12 col-md-4 d-flex justify-content-center justify-content-md-start mb-2 mb-md-0">
-              <h2  className="text-light text-md-left"> User View</h2>
+        <div className="container mt-4">
+          <h2 className="text-center mb-4">Admin Offers</h2>
+          <div className="d-flex justify-content-between mb-3">
+            <div className="d-flex">
+              <input
+                type="text"
+                className="form-control me-2"
+                placeholder="Search offers..."
+              />
+              <button className="btn btn-primary">Search</button>
             </div>
-            {/* Search form start*/}
-            <div className="col-12 col-md-4 d-flex justify-content-center mb-2 mb-md-0">
-              <form method="GET" action="" className="d-flex w-100">
-                <div className="input-group w-100">
-                  <input
-                    type="text"
-                    name="search"
-                    className="form-control"
-                    placeholder="Search here"
-                    value={this.state.search || ""}
-                    onChange={(e) => this.setState({ search: e.target.value })}
-                  />
-                  <div className="input-group-append">
-                    <button
-                      className="btn btn-dark w-10 p-3 ms-2"
-                      type="submit"
-                    >
-                      Search
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>{" "}
-            {/* Search form end */}
-            {/* Add User Button start */}
-            <div className="col-12 col-md-4 d-flex justify-content-center justify-content-md-end">
-              <button
-                id="toggleFormBtnI"
-                className="btn btn-success w-30 fs-5"
-                onClick={this.ShowUserForm} //this function name
-              >
-                Add User
-              </button>
-            </div>{" "}
-            {/* Add User Button End*/}
+            <button
+              id="toggleFormBtnI"
+              className="btn btn-success"
+              onClick={this.ShowUserForm} //this function name
+            >
+              Add User
+            </button>
           </div>
-        </div>
+        </div>{" "}
         {/* User View Start*/}
         <div className="row mt-5">
           <div className="col-1 offset-1 col-md-10 ">
@@ -163,7 +132,7 @@ export class AdUser extends Component {
                     <th>Delete</th>
                   </tr>
                 </thead>
-                <tbody className="fs-4">
+                <tbody>
                   <tr>
                     <td>1</td>
 
@@ -172,7 +141,7 @@ export class AdUser extends Component {
                     <td className="text-success  fw-bold">Active</td>
                     <td>
                       <button
-                        class="btn btn-info fs-5 show-btn "
+                        class="btn btn-info show-btn "
                         onClick={this.ShowUserView}
                       >
                         View{" "}
@@ -180,16 +149,14 @@ export class AdUser extends Component {
                     </td>
                     <td>
                       <button
-                        class="btn btn-success fs-5 show-btn "
-                         onClick={this.ShowUpdateFormUser}
+                        class="btn btn-success show-btn "
+                        onClick={this.ShowUpdateFormUser}
                       >
                         Update{" "}
                       </button>
                     </td>
                     <td>
-                      <button class="btn btn-danger fs-5 show-btn ">
-                        Delete{" "}
-                      </button>
+                      <button class="btn btn-danger show-btn ">Delete </button>
                     </td>
                   </tr>
                   <tr>
@@ -213,7 +180,7 @@ export class AdUser extends Component {
                                     />
                                   </div>
                                   <h4 className="user-name">Angel Raiyani</h4>
-                                  <p className="text-muted fs-5">
+                                  <p className="text-muted">
                                     angelraiyanii@gmail.com
                                   </p>
                                 </div>
@@ -227,11 +194,11 @@ export class AdUser extends Component {
                                       Personal Information
                                     </h3>
 
-                                    <div className="row text-start  fs-4">
+                                    <div className="row text-start">
                                       <div className="col-md-6 mb-3">
-                                        <label htmlFor="full-name">
+                                        <strong htmlFor="full-name">
                                           Full Name
-                                        </label>
+                                        </strong>
                                         <p
                                           id="full-name"
                                           className="form-control-static"
@@ -240,7 +207,7 @@ export class AdUser extends Component {
                                         </p>
                                       </div>
                                       <div className="col-md-6 mb-3">
-                                        <label htmlFor="gender">Gender</label>
+                                        <strong htmlFor="gender">Gender</strong>
                                         <p
                                           id="gender"
                                           className="form-control-static"
@@ -249,11 +216,11 @@ export class AdUser extends Component {
                                         </p>
                                       </div>
                                     </div>
-                                    <div className="row text-start  fs-4">
+                                    <div className="row text-start">
                                       <div className="col-md-6 mb-3">
-                                        <label htmlFor="email">
+                                        <strong htmlFor="email">
                                           Email Address
-                                        </label>
+                                        </strong>
                                         <p
                                           id="email"
                                           className="form-control-static"
@@ -262,9 +229,9 @@ export class AdUser extends Component {
                                         </p>
                                       </div>
                                       <div className="col-md-6 mb-3">
-                                        <label htmlFor="phone">
+                                        <strong htmlFor="phone">
                                           Phone Number
-                                        </label>
+                                        </strong>
                                         <p
                                           id="phone"
                                           className="form-control-static"
@@ -280,9 +247,11 @@ export class AdUser extends Component {
                                     >
                                       Address Information
                                     </h3>
-                                    <div className="row text-start fs-4">
+                                    <div className="row text-start">
                                       <div className="col-md-6 mb-3">
-                                        <label htmlFor="address">Address</label>
+                                        <strong htmlFor="address">
+                                          Address
+                                        </strong>
                                         <p
                                           id="address"
                                           className="form-control-static"
@@ -291,7 +260,7 @@ export class AdUser extends Component {
                                         </p>
                                       </div>
                                       <div className="col-md-6 mb-3">
-                                        <label htmlFor="city">City</label>
+                                        <strong htmlFor="city">City</strong>
                                         <p
                                           id="city"
                                           className="form-control-static"
@@ -300,9 +269,9 @@ export class AdUser extends Component {
                                         </p>
                                       </div>
                                     </div>
-                                    <div className="row text-start  fs-4">
+                                    <div className="row text-start">
                                       <div className="col-md-6 mb-3">
-                                        <label htmlFor="state">State</label>
+                                        <strong htmlFor="state">State</strong>
                                         <p
                                           id="state"
                                           className="form-control-static"
@@ -311,7 +280,7 @@ export class AdUser extends Component {
                                         </p>
                                       </div>
                                       <div className="col-md-6 mb-3">
-                                        <label htmlFor="zip">Pin Code</label>
+                                        <strong htmlFor="zip">Pin Code</strong>
                                         <p
                                           id="zip"
                                           className="form-control-static"

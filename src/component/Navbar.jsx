@@ -15,6 +15,7 @@ import {
   FaShoppingBag,
   FaPhone,
   FaInfoCircle,
+  FaTags,
 } from "react-icons/fa";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -141,7 +142,7 @@ const Navbar = () => {
                   <li>
                     <Link
                       className="dropdown-item d-flex align-items-center"
-                      to="/Order"
+                      to="./Admin/AdOrder"
                     >
                       <FaShoppingBag className="me-2 text-warning" /> Order
                     </Link>
@@ -149,12 +150,36 @@ const Navbar = () => {
                   <li>
                     <Link
                       className="dropdown-item d-flex align-items-center"
-                      to="/Contact"
+                      to="./Admin/AdOffers"
+                    >
+                      <FaTags className="me-2 text-primary" /> Offers
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="dropdown-item d-flex align-items-center"
+                      to="./Admin/AdReviews"
+                    >
+                      <FaTags className="me-2 text-primary" /> Reviews
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="dropdown-item d-flex align-items-center"
+                      to="./Admin/AdBanner"
+                    >
+                      <FaTags className="me-2 text-primary" /> Banners
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="dropdown-item d-flex align-items-center"
+                      to="./Admin/AdContact"
                     >
                       <FaPhone className="me-2 text-danger" /> Contact
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link
                       className="dropdown-item d-flex align-items-center"
                       to="/Cart"
@@ -169,11 +194,11 @@ const Navbar = () => {
                     >
                       <FaHeart className="me-2 text-danger" /> Wishlist
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link
                       className="dropdown-item d-flex align-items-center"
-                      to="/AboutUs"
+                      to="./Admin/AdAbout"
                     >
                       <FaInfoCircle className="me-2 text-secondary" /> About Us
                     </Link>

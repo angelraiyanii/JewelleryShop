@@ -117,55 +117,24 @@ export class AdPro extends Component {
     return (
       <center>
         <div className="container ">
-          <div
-            className="row align-items-center shadow rounded"
-            style={{
-              backgroundImage: `url(${c1})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              height: "200px",
-              width: "100%",
-            }}
-          >
-            <div className="col-md-4 d-flex justify-content justify-content-md-star">
-              <h2 className="text-light text-md-left">Product View</h2>
-            </div>
+          <h2 className="text-center mb-4">Product View</h2>
 
-            {/* Search form */}
-            <div className="col-12 col-md-4 d-flex justify-content-center mb-2 mb-md-0">
-              <form method="GET" action="" className="d-flex w-100">
-                <div className="input-group w-100">
-                  <input
-                    type="text"
-                    name="search"
-                    className="form-control"
-                    placeholder="Search here"
-                    value={this.state.search || ""}
-                    onChange={(e) => this.setState({ search: e.target.value })}
-                  />
-                  <div className="input-group-append">
-                    <button
-                      className="btn btn-dark w-10 p-3 ms-2"
-                      type="submit"
-                    >
-                      Search
-                    </button>
-                  </div>
-                </div>
-              </form>
+          <div className="d-flex justify-content-between mb-3">
+            <div className="d-flex">
+              <input
+                type="text"
+                className="form-control me-2"
+                placeholder="Search offers..."
+              />
+              <button className="btn btn-primary">Search</button>
             </div>
-
-            {/* Add Category Button */}
-            <div className="col-12 col-md-4 d-flex justify-content-center justify-content-md-end">
-              <button
-                id="toggleFormBtnI"
-                className="btn btn-success w-30 fs-5"
-                onClick={this.ShowProductForm} //this function name
-              >
-                Add Product
-              </button>
-            </div>
+            <button
+              id="toggleFormBtnI"
+              className="btn btn-success"
+              onClick={this.ShowProductForm} //this function name
+            >
+              Add Product
+            </button>
           </div>
         </div>
         {/* Product View Start*/}
@@ -186,7 +155,7 @@ export class AdPro extends Component {
                       <th>Delete</th>
                     </tr>
                   </thead>
-                  <tbody className="fs-4">
+                  <tbody>
                     <tr>
                       <td>1</td>
                       <td>
@@ -201,7 +170,7 @@ export class AdPro extends Component {
                       <td className="text-success  fw-bold">Active</td>
                       <td>
                         <button
-                          class="btn btn-info fs-5 show-btn "
+                          class="btn btn-info show-btn "
                           onClick={this.viewsigleProduct}
                         >
                           View{" "}
@@ -209,14 +178,14 @@ export class AdPro extends Component {
                       </td>
                       <td>
                         <button
-                          class="btn btn-success fs-5 show-btn "
+                          class="btn btn-success show-btn "
                           onClick={this.UpdateProduct}
                         >
                           Update{" "}
                         </button>
                       </td>
                       <td>
-                        <button class="btn btn-danger fs-5 show-btn ">
+                        <button class="btn btn-danger show-btn ">
                           Delete{" "}
                         </button>
                       </td>
