@@ -57,7 +57,13 @@ class Contactus extends Component {
     if (Object.keys(errors).length === 0) {
       console.log("Form Data Submitted:", this.state);
       alert("Thank you for contacting us! We will get back to you soon.");
-      this.setState({ name: "", email: "", phone: "", message: "", errors: {} });
+      this.setState({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+        errors: {},
+      });
     }
   };
 
@@ -80,52 +86,68 @@ class Contactus extends Component {
                   <label className="form-label">Full Name</label>
                   <input
                     type="text"
-                    className={`form-control ${this.state.errors.name ? "is-invalid" : ""}`}
+                    className={`form-control ${
+                      this.state.errors.name ? "is-invalid" : ""
+                    }`}
                     name="name"
                     value={this.state.name}
                     onChange={this.handleChange}
                   />
                   {this.state.errors.name && (
-                    <div className="invalid-feedback">{this.state.errors.name}</div>
+                    <div className="invalid-feedback">
+                      {this.state.errors.name}
+                    </div>
                   )}
                 </div>
                 <div className="mb-3">
                   <label className="form-label">Email Address</label>
                   <input
                     type="email"
-                    className={`form-control ${this.state.errors.email ? "is-invalid" : ""}`}
+                    className={`form-control ${
+                      this.state.errors.email ? "is-invalid" : ""
+                    }`}
                     name="email"
                     value={this.state.email}
                     onChange={this.handleChange}
                   />
                   {this.state.errors.email && (
-                    <div className="invalid-feedback">{this.state.errors.email}</div>
+                    <div className="invalid-feedback">
+                      {this.state.errors.email}
+                    </div>
                   )}
                 </div>
                 <div className="mb-3">
                   <label className="form-label">Phone Number</label>
                   <input
                     type="tel"
-                    className={`form-control ${this.state.errors.phone ? "is-invalid" : ""}`}
+                    className={`form-control ${
+                      this.state.errors.phone ? "is-invalid" : ""
+                    }`}
                     name="phone"
                     value={this.state.phone}
                     onChange={this.handleChange}
                   />
                   {this.state.errors.phone && (
-                    <div className="invalid-feedback">{this.state.errors.phone}</div>
+                    <div className="invalid-feedback">
+                      {this.state.errors.phone}
+                    </div>
                   )}
                 </div>
                 <div className="mb-3">
                   <label className="form-label">Message</label>
                   <textarea
-                    className={`form-control ${this.state.errors.message ? "is-invalid" : ""}`}
+                    className={`form-control ${
+                      this.state.errors.message ? "is-invalid" : ""
+                    }`}
                     rows="4"
                     name="message"
                     value={this.state.message}
                     onChange={this.handleChange}
                   ></textarea>
                   {this.state.errors.message && (
-                    <div className="invalid-feedback">{this.state.errors.message}</div>
+                    <div className="invalid-feedback">
+                      {this.state.errors.message}
+                    </div>
                   )}
                 </div>
                 <div className="text-center">

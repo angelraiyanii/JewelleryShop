@@ -41,7 +41,6 @@ class Rating_Review extends Component {
               <FaStar className="star-icon" />
               <FaStar className="star-icon" />
               <FaStarHalfAlt className="star-icon" />
-       
             </div>
           </div>
         </div>

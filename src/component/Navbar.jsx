@@ -77,7 +77,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/SinglePro">
+                  <Link className="dropdown-item" to="/">
                     Diamond
                   </Link>
                 </li>
