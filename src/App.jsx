@@ -33,7 +33,6 @@ function App() {
               <Slider />
               <Category />
               <Product />
-              <Rating_Review/>
             </>
           }
         />
@@ -50,10 +49,10 @@ function App() {
         <Route path="/ForgotPassword" element={<ForgotPassword />} />
         <Route path="/OTPVerification" element={<OTPVerification />} />
         <Route path="/Rating_Review" element={<Rating_Review />} />
-        <Route path="/Admin/AdCategory" element={<AdCategory/>}/>
-        <Route path="/Admin/AdPro" element={<AdPro/>}/>
-        <Route path="/SinglePro" element={<SinglePro/>}/>
-        <Route path="/Admin/AdUser" element={<AdUser/>}/>
+        <Route path="/Admin/AdCategory" element={<AdCategory />} />
+        <Route path="/Admin/AdPro" element={<AdPro />} />
+        <Route path="/SinglePro" element={<SinglePro />} />
+        <Route path="/Admin/AdUser" element={<AdUser />} />
       </Routes>
       <Footer />
     </Router>
