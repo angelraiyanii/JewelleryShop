@@ -97,7 +97,7 @@ export class AdUser extends Component {
     return (
       <center>
         <div className="container mt-4">
-          <h2 className="text-center mb-4">Admin Offers</h2>
+          <h2 className="text-center mb-4">Users</h2>
           <div className="d-flex justify-content-between mb-3">
             <div className="d-flex">
               <input

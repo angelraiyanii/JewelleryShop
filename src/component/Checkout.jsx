@@ -1,93 +1,92 @@
-import React, { useState } from "react";
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+class CheckOut extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      orderId: "",
+      netPayable: "",
+      errors: {},
+    };
+  }
 
-const Checkout = () => {
-  const [orderDetails, setOrderDetails] = useState({
-    order_id: "",
-    total: "",
-  });
-
-  const [errors, setErrors] = useState({});
-
-  // Handle input change
-  const handleChange = (e) => {
-    setOrderDetails({ ...orderDetails, [e.target.name]: e.target.value });
+  validateForm = () => {
+    let errors = {};
+    if (!this.state.orderId) {
+      errors.orderId = "Order ID is required";
+    }
+    if (!this.state.netPayable) {
+      errors.netPayable = "Payable Amount is required";
+    }
+    this.setState({ errors });
+    return Object.keys(errors).length === 0;
   };
 
-  // Validate Form
-  const validateForm = () => {
-    let tempErrors = {};
-    if (!orderDetails.order_id.trim())
-      tempErrors.order_id = "Order ID is required.";
-    if (!orderDetails.total.trim())
-      tempErrors.total = "Total amount is required.";
-    setErrors(tempErrors);
-    return Object.keys(tempErrors).length === 0;
-  };
-
-  // Handle form submission
-  const handleSubmit = (e) => {
+  handleCheckout = (e) => {
     e.preventDefault();
-    if (validateForm()) {
-      console.log("Order Details:", orderDetails);
-      alert("Order placed successfully!");
+    if (this.validateForm()) {
+      console.log("Checkout Successful!");
     }
   };
 
-  return (
-    <div className="container mt-4">
-      <h2 className="text-center mb-4">Checkout</h2>
-      <div className="card p-4 shadow">
-        <form onSubmit={handleSubmit}>
-          <div className="row">
-            <div className="col-4"></div>
-            <div className="col-4">
-              <div className="mb-3">
-                <label className="form-label">Order ID</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  name="order_id"
-                  value={orderDetails.order_id}
-                  onChange={handleChange}
-                />
-                {errors.order_id && (
-                  <small className="text-danger">{errors.order_id}</small>
-                )}
-              </div>
-            </div>
-            <div className="col-4"></div>
-          </div>
+  handleChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
 
-          <div className="row">
-            <div className="col-4"></div>
-            <div className="col-4 mb-3">
-              <label className="form-label">Total Amount</label>
+  render() {
+    return (
+      <div className="container mt-5 d-flex justify-content-center">
+        <div className="card shadow p-4" style={{ width: "400px" }}>
+          <h2 className="text-center">Checkout</h2>
+          <form onSubmit={this.handleCheckout}>
+            <div className="mb-3">
+              <label className="form-label">Order ID:</label>
               <input
                 type="text"
-                className="form-control"
-                name="total"
-                value={orderDetails.total}
-                onChange={handleChange}
+                name="orderId"
+                className={`form-control ${
+                  this.state.errors.orderId ? "is-invalid" : ""
+                }`}
+                value={this.state.orderId}
+                onChange={this.handleChange}
+                placeholder="Enter Order ID"
               />
-              {errors.total && (
-                <small className="text-danger">{errors.total}</small>
+              {this.state.errors.orderId && (
+                <div className="invalid-feedback">
+                  {this.state.errors.orderId}
+                </div>
               )}
             </div>
-            <div className="col-4"></div>
-          </div>
-          <div className="row">
-            <div className="col-4"></div>
-            <div className="col-4">
-              <button type="submit" className="btn btn-success w-100">
-                Place Order
-              </button>
-            </div>
-            <div className="col-4"></div>
-          </div>
-        </form>
-      </div>
-    </div>
-  );
-};
 
-export default Checkout;
+            <div className="mb-3">
+              <label className="form-label">Payable Amount:</label>
+              <input
+                type="text"
+                name="netPayable"
+                className={`form-control ${
+                  this.state.errors.netPayable ? "is-invalid" : ""
+                }`}
+                value={this.state.netPayable}
+                onChange={this.handleChange}
+                placeholder="Enter Amount"
+              />
+              {this.state.errors.netPayable && (
+                <div className="invalid-feedback">
+                  {this.state.errors.netPayable}
+                </div>
+              )}
+            </div>
+
+            <button type="submit" className="btn btn-success w-50">
+              Pay Now
+            </button>
+            <br />
+            <Link to="/">Continue Shopping</Link>
+          </form>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default CheckOut;

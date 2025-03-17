@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import { FaCreditCard } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
+import { FaAd } from "react-icons/fa";
 import {
   FaUserCircle,
   FaSignInAlt,
@@ -160,7 +162,7 @@ const Navbar = () => {
                       className="dropdown-item d-flex align-items-center"
                       to="./Admin/AdReviews"
                     >
-                      <FaTags className="me-2 text-primary" /> Reviews
+                      <FaStar className="me-2 text-success" /> Reviews
                     </Link>
                   </li>
                   <li>
@@ -168,7 +170,7 @@ const Navbar = () => {
                       className="dropdown-item d-flex align-items-center"
                       to="./Admin/AdBanner"
                     >
-                      <FaTags className="me-2 text-primary" /> Banners
+                      <FaAd className="me-2 text-info" /> Banners
                     </Link>
                   </li>
                   <li>
@@ -261,6 +263,14 @@ const Navbar = () => {
                   to="/Cart"
                 >
                   <FaShoppingCart className="me-2 text-primary" /> Cart
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="dropdown-item d-flex align-items-center"
+                  to="/Checkout"
+                >
+                  <FaCreditCard className="me-2 text-danger" /> Checkout
                 </Link>
               </li>
               <li>
